@@ -21,7 +21,7 @@ class TouchHDRMenu(QWidget):
 
 class AdvancedHDRLayout(QWidget):
 
-    def load_main_window(self):
+    def select_all(self):
 
         self.check0.setCheckState(Qt.Checked)
         self.check1.setCheckState(Qt.Checked)
@@ -54,6 +54,41 @@ class AdvancedHDRLayout(QWidget):
         self.check28.setCheckState(Qt.Checked)
         self.check29.setCheckState(Qt.Checked)
         self.check30.setCheckState(Qt.Checked)
+
+    def select_half(self):
+
+        self.check0.setCheckState(Qt.Checked)
+     
+        self.check2.setCheckState(Qt.Checked)
+     
+        self.check4.setCheckState(Qt.Checked)
+     
+        self.check6.setCheckState(Qt.Checked)
+     
+        self.check8.setCheckState(Qt.Checked)
+     
+        self.check10.setCheckState(Qt.Checked)
+     
+        self.check12.setCheckState(Qt.Checked)
+     
+        self.check14.setCheckState(Qt.Checked)
+    
+        self.check16.setCheckState(Qt.Checked)
+    
+        self.check18.setCheckState(Qt.Checked)
+    
+        self.check20.setCheckState(Qt.Checked)
+    
+        self.check22.setCheckState(Qt.Checked)
+    
+        self.check24.setCheckState(Qt.Checked)
+    
+        self.check26.setCheckState(Qt.Checked)
+        
+        self.check28.setCheckState(Qt.Checked)
+        
+        self.check30.setCheckState(Qt.Checked)
+    
                 
     def capture_photos(self):
 
@@ -119,14 +154,21 @@ class AdvancedHDRLayout(QWidget):
                 y = y + 1
 
         #Add menu buttons
-        self.back = QPushButton("All", self)
+        self.progress = QLabel("...", self)
+        self.semi = QPushButton("Half", self)
+        self.all = QPushButton("All", self)
         self.capture = QPushButton("Capture", self)
-        self.controlsLayout.addWidget(self.back, y, (x+3))
+
+        self.controlsLayout.addWidget(self.progress, y, (x+1))
+        self.controlsLayout.addWidget(self.semi, y, (x+2))
+        self.controlsLayout.addWidget(self.all, y, (x+3))
         self.controlsLayout.addWidget(self.capture, y, (x+4))
 
 
         #Link action to menu buttons
-        self.back.clicked.connect(self.load_main_window)
+
+        self.semi.clicked.connect(self.select_half)
+        self.all.clicked.connect(self.select_all)
         self.capture.clicked.connect(self.capture_photos)
 
         self.setLayout(self.controlsLayout)
