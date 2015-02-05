@@ -22,9 +22,39 @@ class TouchHDRMenu(QWidget):
 class AdvancedHDRLayout(QWidget):
 
     def load_main_window(self):
-        #TODO
-        print("TODO")
-        
+
+        self.check0.setCheckState(Qt.Checked)
+        self.check1.setCheckState(Qt.Checked)
+        self.check2.setCheckState(Qt.Checked)
+        self.check3.setCheckState(Qt.Checked)
+        self.check4.setCheckState(Qt.Checked)
+        self.check5.setCheckState(Qt.Checked)
+        self.check6.setCheckState(Qt.Checked)
+        self.check7.setCheckState(Qt.Checked)
+        self.check8.setCheckState(Qt.Checked)
+        self.check9.setCheckState(Qt.Checked)
+        self.check10.setCheckState(Qt.Checked)
+        self.check11.setCheckState(Qt.Checked)
+        self.check12.setCheckState(Qt.Checked)
+        self.check13.setCheckState(Qt.Checked)
+        self.check14.setCheckState(Qt.Checked)
+        self.check15.setCheckState(Qt.Checked)
+        self.check16.setCheckState(Qt.Checked)
+        self.check17.setCheckState(Qt.Checked)
+        self.check18.setCheckState(Qt.Checked)
+        self.check19.setCheckState(Qt.Checked)
+        self.check20.setCheckState(Qt.Checked)
+        self.check21.setCheckState(Qt.Checked)
+        self.check22.setCheckState(Qt.Checked)
+        self.check23.setCheckState(Qt.Checked)
+        self.check24.setCheckState(Qt.Checked)
+        self.check25.setCheckState(Qt.Checked)
+        self.check26.setCheckState(Qt.Checked)
+        self.check27.setCheckState(Qt.Checked)
+        self.check28.setCheckState(Qt.Checked)
+        self.check29.setCheckState(Qt.Checked)
+        self.check30.setCheckState(Qt.Checked)
+                
     def capture_photos(self):
 
         #self.btn_take_picture.setText("Caputuring..")
@@ -89,7 +119,7 @@ class AdvancedHDRLayout(QWidget):
                 y = y + 1
 
         #Add menu buttons
-        self.back = QPushButton("Back", self)
+        self.back = QPushButton("All", self)
         self.capture = QPushButton("Capture", self)
         self.controlsLayout.addWidget(self.back, y, (x+3))
         self.controlsLayout.addWidget(self.capture, y, (x+4))
