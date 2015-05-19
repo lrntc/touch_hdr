@@ -199,7 +199,9 @@ detect_camera.set_up_dslr()
 app = QApplication(sys.argv)
 
 window = TouchHDRWindow()
-window.show()
+#window.show()
+window.setWindowFlags(Qt.FramelessWindowHint)
+window.showFullScreen()
 
 app.exec_()
 sys.exit()
